@@ -8,6 +8,5 @@ public class Product : BaseAuditableEntity
     public double? Price { get; set; }
     public double? OldPrice { get; set; }
     public int? ProductCategoryId { get; set; }
-    public int Status { get; set; }
     public string? Contents { get; set; }
 }
