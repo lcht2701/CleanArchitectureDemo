@@ -1013,7 +1013,6 @@ export class CreateProductCommand implements ICreateProductCommand {
     price?: number | undefined;
     oldPrice?: number | undefined;
     productCategoryId?: number | undefined;
-    status?: number;
     contents?: string | undefined;
 
     constructor(data?: ICreateProductCommand) {
@@ -1032,7 +1031,6 @@ export class CreateProductCommand implements ICreateProductCommand {
             this.price = _data["price"];
             this.oldPrice = _data["oldPrice"];
             this.productCategoryId = _data["productCategoryId"];
-            this.status = _data["status"];
             this.contents = _data["contents"];
         }
     }
@@ -1051,7 +1049,6 @@ export class CreateProductCommand implements ICreateProductCommand {
         data["price"] = this.price;
         data["oldPrice"] = this.oldPrice;
         data["productCategoryId"] = this.productCategoryId;
-        data["status"] = this.status;
         data["contents"] = this.contents;
         return data;
     }
@@ -1063,7 +1060,6 @@ export interface ICreateProductCommand {
     price?: number | undefined;
     oldPrice?: number | undefined;
     productCategoryId?: number | undefined;
-    status?: number;
     contents?: string | undefined;
 }
 

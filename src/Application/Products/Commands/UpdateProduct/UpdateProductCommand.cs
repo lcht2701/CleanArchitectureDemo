@@ -7,8 +7,6 @@ namespace CleanArchitecture.Application.Products.Commands.UpdateProduct;
 
 public record UpdateProductCommand : IRequest
 {
-    public int Id { get; init; }
-
     public string? Description { get; set; }
     public double? Price { get; set; }
 }

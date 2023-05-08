@@ -687,10 +687,6 @@
             "format": "int32",
             "nullable": true
           },
-          "status": {
-            "type": "integer",
-            "format": "int32"
-          },
           "contents": {
             "type": "string",
             "nullable": true

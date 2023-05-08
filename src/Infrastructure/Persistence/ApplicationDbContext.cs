@@ -25,6 +25,8 @@ public class ApplicationDbContext : ApiAuthorizationDbContext<ApplicationUser>, 
     {
         _mediator = mediator;
         _auditableEntitySaveChangesInterceptor = auditableEntitySaveChangesInterceptor;
+        AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
+        AppContext.SetSwitch("Npgsql.DisableDateTimeInfinityConversions", true);
     }
 
     public DbSet<TodoList> TodoLists => Set<TodoList>();
